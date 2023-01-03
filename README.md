@@ -4,15 +4,17 @@
 which is a data-driven method proposed by
 [Zhang et al. 2020a](https://ui.adsabs.harvard.edu/abs/2020ApJS..246....9Z/abstract) and 
 [Zhang et al. 2020b](https://ui.adsabs.harvard.edu/abs/2020RAA....20...51Z/abstract).
-SSF aims ?
-?using ATLAS-A library, which contains spectra covering from O type to M type, as the training dataset. 
 
-SSF consists of 4 sub-models to predict empirical stellar spectra in a large range of stellar types.
+**SSF** aims to provide an empirical stellar spectral predictor with a wide coverage of stellar parameters
+trained on the ATLAS-A library ([Ji et al. submitted to ApJS]()) which contains spectra 
+from O type to M type. 
+
+**SSF** consists of 4 sub-models to predict empirical stellar spectra in a large range of stellar types.
 1. SSF-N mainly covers the parameter space such that Teff from 3700 to 8700 K, 
 `log g` from 0 to 6 dex and `[M/H]` from - 1.5 to 0.5 dex. 
 2. SSF-gM covers M giant stars with `Teff` from 3520 to 4000 K and `[M/H]` from - 1.5 to 0.4 dex.
 3. SSF-dM covers M dwarf stars with `Teff` from 3295 to 4040 K and `[M/H]` from -1.0 to 0.1 dex. 
-4. SSF-B mainly covers the hot stars with `Teff` from 9000 to 24000 K and `MG` from -5.2 to 1.5 dex. 
+4. SSF-B mainly covers the hot stars with `Teff` from 9000 to 24000 K and `MG` from -5.2 to 1.5 mag. 
 
 The input parameters 
 - for SSF-N: `Teff`, `logg` and `[M/H]`
@@ -24,7 +26,7 @@ where
 - `Teff` is the effective temperature
 - `logg` is the logarithm of the surface gravity
 - `[M/H]` is the overall metallicity
-- `MG` is the absolute magnitude in G band
+- `MG` is the absolute magnitude in `G` band
 
 # How to use SFF models
 1. Download the trained SLAM models from https://nadc.china-vo.org/res/r101182/
